@@ -11,4 +11,4 @@ app.add_url_rule(rule='/app/gender/',
                  methods=['GET','POST'])
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5011)
+    app.run(debug=True)
