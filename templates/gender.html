@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br><br>
+            <h3 class="display-8">Gender Classification</h3>
+            <p>Upload an image (.jpg, .jpeg, .png), our model will 
+                detect face first and then predict gender based on face (Male or Female).
+            </p>
+            <!-- Upload image form -->
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <input type="file" class="form-control" name="image_name" required>
+                    <button type="submit" class="btn btn-outline-primary">Upload & Predict</button>
+                </div>
+            </form>
+            
+        </div>
+        <div class="col-8">
+            <!-- Report: prediction image, reporting (grayscale, eigen image and probability score) -->
+            {% if fileupload %}
+            <br><br>
+            <h3 class="display-8">Predicted Image</h3>
+            <img src="/static/predict/prediction_image.jpg" class="image-fluid" width="500" alt="Predicted Image">
+            <hr>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Detection Face</th>
+                        <th>Eigen Image</th>
+                        <th>Prediction Gender</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for element in report %}
+                    <tr>
+                        <td><img src="/static/predict/{{ element[0] }}" class="image-fluid" height="100" alt="Detected Face"></td>
+                        <td><img src="/static/predict/{{ element[1] }}" class="image-fluid" height="100" alt="Eigen Image"></td>
+                        <td>{{ element[2] }}</td>
+                        <td>{{ element[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>No predictions to display.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
