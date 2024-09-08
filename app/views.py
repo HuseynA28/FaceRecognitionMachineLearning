@@ -5,7 +5,7 @@ from flask import render_template, request
 import matplotlib.image as matimg
 
 
-UPLOAD_FOLDER = r'.\static\upload'
+UPLOAD_FOLDER = os.path.join('.', 'static', 'upload')
 
 
 def index():

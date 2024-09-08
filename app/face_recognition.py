@@ -5,12 +5,18 @@ import cv2
 
 
 # Load all models
-haar = cv2.CascadeClassifier('model\haarcascade_frontalface_default.xml') # cascade classifier
-model_svm =  pickle.load(open('model\model_svm.pickle',mode='rb')) # machine learning model (SVM)
-pca_models = pickle.load(open('model\pca_dict.pickle',mode='rb')) # pca dictionary
+haar_classifier_path = './model/haarcascade_frontalface_default.xml'
+haar = cv2.CascadeClassifier(haar_classifier_path)
+
+svm_model_path = './model/model_svm.pickle'
+with open(svm_model_path, 'rb') as file:
+    model_svm = pickle.load(file)
+
+pca_models_path = './model/pca_dict.pickle'
+with open(pca_models_path, 'rb') as file:
+    pca_models = pickle.load(file)
 model_pca = pca_models['pca'] # PCA model
 mean_face_arr = pca_models['mean_face'] # Mean Face
-
 
 def faceRecognitionPipeline(filename,path=True):
     if path:
