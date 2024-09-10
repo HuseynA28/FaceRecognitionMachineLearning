@@ -24,15 +24,15 @@ https://templatemo.com/tm-560-astro-motion
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
-        <source src="video/gfp-astro-timelapse.mp4" type="video/mp4">
-    </video>
+        <!-- <source src="{{ url_for('static', filename='video/gfp-astro-timelapse.mp4') }}" type="video/mp4"> -->
+      </video>
     <div class="page-container">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12">
             <div class="cd-slider-nav">
               <nav class="navbar navbar-expand-lg" id="tm-nav">
-                <a class="navbar-brand" href="#">Astro Motion</a>
+                <a class="navbar-brand" href="#">Face Detection APP</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -43,7 +43,9 @@ https://templatemo.com/tm-560-astro-motion
                         <div class="circle"></div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#0" data-no="2">Gallery</a>
+                        <a class="nav-link" href="/app/gender/" data-no="2">Gender App</a>
+
+                      
                         <div class="circle"></div>
                       </li>
                       <li class="nav-item">
@@ -67,13 +69,13 @@ https://templatemo.com/tm-560-astro-motion
             <div class="page-width-1 page-left">
               <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
                 <div class="intro-left tm-bg-dark">
-                  <h2 class="mb-4">Welcome to Astro Motion</h2>
+                  <h2 class="mb-4">Face Detection</h2>
                   <p class="mb-4">
-                    This HTML template has a motion video background loop which is provided by <a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>. This is
-                    one-page responsive layout for your websites. Feel
-                  free to use this for a commercial purpose. </p>
+                    This app is designed to detect male and female faces.
+                  </p>
                   <p class="mb-0">
-                  You are not permitted to redistribute this template on your Free CSS collection websites. Please <a rel="nofollow" href="https://templatemo.com/contact" target="_blank">contact us</a> for more information. </p>
+                    The source code is freely available and free from copyright, hosted on GitHub by Huseyn Abdullayev. <a href="https://github.com/HuseynA28/FaceRecognitionMachineLearning" target="_blank">Access the GitHub repository here.</a>
+                    <a rel="nofollow" href="https://templatemo.com/contact" target="_blank"> </p>
                 </div>
                 <div class="intro-right">
                   <!-- <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1" style="width: 200px; height: 200px;">
@@ -83,17 +85,20 @@ https://templatemo.com/tm-560-astro-motion
                    <img src="{{ url_for('static', filename='img/home-img-2.jpg') }}" alt="Image" class="img-fluid intro-img-2" style="width: 200px; height: 200px;">
  
                   
+                  </div>
+                  <div class="circle intro-circle-1"></div>
+                  <div class="circle intro-circle-2"></div>
+                  <div class="circle intro-circle-3"></div>
+                  <div class="circle intro-circle-4"></div>
                 </div>
-                <div class="circle intro-circle-1"></div>
-                <div class="circle intro-circle-2"></div>
-                <div class="circle intro-circle-3"></div>
-                <div class="circle intro-circle-4"></div>
-              </div>
+  
+  
+                <div class="text-center">
+                
+                  <a class="btn btn-outline-primary" href="/app/gender/">Gender App</a>
+                </div>
+  
 
-
-              <div class="text-center">
-                <a class="btn btn-outline-primary" href="/app/gender/">Gender App</a>
-              </div>
 
               
           <li data-page-no="3" class="px-3">
@@ -168,10 +173,10 @@ https://templatemo.com/tm-560-astro-motion
     <div class="container-fluid">
       <footer class="row mx-auto tm-footer">
         <div class="col-md-6 px-0">
-          Copyright 2021 Astro Motion Company Limited. All rights reserved.
+       
         </div>
         <div class="col-md-6 px-0 tm-footer-right">
-          Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank" class="tm-link-white">TemplateMo</a>
+          <!-- Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank" class="tm-link-white">TemplateMo</a> -->
         </div>
       </footer>
     </div>
